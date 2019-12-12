@@ -69,8 +69,9 @@
   max-width: 920px;
   width: 100%;
   color: #fff;
-  .slick-current{
-    .dots-box{
+
+  .slick-current {
+    .dots-box {
       border-top: 4px solid $main-color;
     }
   }
@@ -96,5 +97,109 @@
     line-height: 19px;
   }
 }
+
+.header__aside {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  border-right: 1px solid rgba(#fff, .25);
+  height: 100vh;
+  text-align: center;
+  color: #fff;
+}
+
+.header__title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 467px;
+  font-weight: 800;
+  font-size: 200px;
+  line-height: 156px;
+  text-transform: uppercase;
+  opacity: 0.07;
+  z-index: 4;
+  color: #fff;
+}
+
+.menu {
+  padding-top: 40px;
+  a {
+    color: #fff;
+
+    span {
+      display: block;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      letter-spacing: 3px;
+      padding-top: 6px;
+      margin-bottom: 20px;
+    }
+  }
+}
+.header__search{
+  padding: 15px 0 30px;
+}
+.header__date {
+  font-size: 72px;
+  line-height: 64px;
+  font-weight: 800;
+
+  span {
+    display: block;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 1.4px;
+    margin-bottom: 30px;
+    padding-top: 10px;
+  }
+}
+
+.header__location {
+  position: relative;
+  display: inline-block;
+  padding-left: 19px;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 1.05px;
+  &::before{
+    content: "";
+    position: absolute;
+    width: 11px;
+    height: 14px;
+    background-image: url(../images/marker.svg);
+    left: 0;
+    top: 0;
+  }
+}
+.header__map{
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 3;
+}
+
+.header__arrows{
+  position: absolute;
+  left: 210px;
+  bottom: 30px;
+  z-index: 3;
+}
+
+.line-animation{
+  stroke-dashoffset: 600;
+  stroke-dasharray: 600;
+  animation: animdash 3s infinite 6s;
+}
+@keyframes animdash{
+  to{
+    stroke-dashoffset: 0;
+  }
+}
+
 
 @import "media";
